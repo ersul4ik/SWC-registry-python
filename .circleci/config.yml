@@ -11,7 +11,6 @@ jobs:
             command: |
               pip install -r ../requirements.txt
               pytest ../tests/
-              $ENVSET = 'test'
   deploy:
     docker:
       - image: python:3.5
@@ -23,6 +22,16 @@ jobs:
             echo -e "[pypi]" >> ~/.pypirc
             echo -e "username = ersul4ik" >> ~/.pypirc
             echo -e "password = $PYPI_PASSWORD" >> ~/.pypirc
+      - run:
+          name: create packages
+          command: |
+            pip install -r requirements.txt
+            python setup.py sdist bdist_wheel
+      - run:
+          name: upload to pypi
+          command: |
+            pip install -r requirements.txt
+            twine upload dist/*
 workflows:
   version: 2
   build-test-and-deploy:

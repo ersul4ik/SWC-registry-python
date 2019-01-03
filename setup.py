@@ -6,8 +6,10 @@ import sys
 from setuptools import setup
 from setuptools.command.install import install
 
+from swc_registry import __version__
+
 # circleci.py version
-VERSION = os.getenv('CIRCLE_TAG')
+VERSION = __version__
 
 setup(
     name="swc-registry",
@@ -29,7 +31,5 @@ setup(
     ],
     setup_requires=["pytest-runner"],
     tests_require=["pytest"],
-    cmdclass={
-        'verify': VerifyVersionCommand,
-    }
+    
 )
