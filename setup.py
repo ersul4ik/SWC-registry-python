@@ -12,7 +12,7 @@ from swc_registry import __version__
 VERSION = __version__
 
 setup(
-    name="swc-registry",
+    name="swc-registry-test-package",
     version=VERSION,
     url="https://github.com/SmartContractSecurity/SWC-registry-python",
     author="SmartContractSecurity",
