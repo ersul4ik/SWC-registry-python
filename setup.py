@@ -13,7 +13,7 @@ setup(
     url="https://github.com/SmartContractSecurity/SWC-registry-python",
     author="SmartContractSecurity",
     author_email="ersul4ik@gmail.com",
-    description="Python library for accessing SWC-registry content.",
+    description="The python library for accessing SWC-registry content.",
     long_description=open("README.md").read(),
     long_description_content_type='text/markdown',
     packages=["swc_registry"],
