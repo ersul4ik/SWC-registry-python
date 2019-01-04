@@ -20,7 +20,7 @@ jobs:
           name: init .pypirc
           command: |
             echo -e "[pypi]" >> ~/.pypirc
-            echo -e "username = ersul4ik" >> ~/.pypirc
+            echo -e "username = $PYPI_USERNAME" >> ~/.pypirc
             echo -e "password = $PYPI_PASSWORD" >> ~/.pypirc
       - run:
           name: create packages
@@ -38,7 +38,7 @@ jobs:
           command: |
               git config --global user.email "$GIT_USER_EMAIL"
               git config --global user.name "$GIT_USER"
-              git add . && git commit -am "Changed the package version [skip ci]" && git push -q https://${GITHUB_TOKEN}@github.com/ersul4ik/SWC-registry-python.git
+              git add . && git commit -am "Changed the package version [skip ci]" && git push -q ${REPO_URL}
 workflows:
   version: 2
   build-test-and-deploy:
