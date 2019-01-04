@@ -8,7 +8,7 @@ from setuptools.command.install import install
 
 
 setup(
-    name="swc-registry",
+    name="swc-registry-test",
     version="0.0.6",
     url="https://github.com/SmartContractSecurity/SWC-registry-python",
     author="SmartContractSecurity",
