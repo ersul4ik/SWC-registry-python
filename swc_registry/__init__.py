@@ -1,5 +1,5 @@
 from swc_registry.get_entry_info import SWC
 
-__version__ = "0.0.62"
+__version__ = "0.0.63"
 __author__ = "SmartContractSecurity"
 __all__ = []
