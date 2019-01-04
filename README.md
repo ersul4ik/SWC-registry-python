@@ -17,7 +17,7 @@ $ pip install -U swc-registry
 from swc_registry import SWC
 
 swc = SWC('SWC-100')
-print (swc.title)
+print(swc.title)
 
 // Function Default Visibility
 ```
@@ -32,7 +32,7 @@ On first use of the SWC methods, the SWC registry is initialized from file (swc-
 from swc_registry import SWC
 
 swc = SWC('SWC-100', True)
-print (swc.title)
+print(swc.title)
 
 // Function Default Visibility
 ```

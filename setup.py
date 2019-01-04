@@ -6,14 +6,10 @@ import sys
 from setuptools import setup
 from setuptools.command.install import install
 
-from swc_registry import __version__
-
-# circleci.py version
-VERSION = __version__
 
 setup(
     name="swc-registry-test-package",
-    version=VERSION,
+    version="0.0.58",
     url="https://github.com/SmartContractSecurity/SWC-registry-python",
     author="SmartContractSecurity",
     author_email="ersul4ik@gmail.com",
